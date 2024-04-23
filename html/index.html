@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Heroes Store</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="container-form">
+        <div class="img-hero">
+            <img src="/images/superman.png" alt="image superman" width="500px" class="img-hero">
+        </div>
+        <div class="form">
+            <h1>SUPER STORE</h1>
+            <form action="#" method="post">
+                <label for="name">Product name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code" required>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="type">Product Type:</label>
+                <select id="type" name="type" required>
+                    <option value="">Select type</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Alimentos">Alimentos</option>
+                </select>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
