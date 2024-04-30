@@ -19,28 +19,33 @@
         </div>
         <div class="form">
             <h1>SUPER STORE</h1>
-            <form action="#" method="post">
+            <form>
+                <label for="idProduct">Product ID:</label>
+                <input type="number" id="idProduct" name="idProduct" required>
+
                 <label for="name">Product name:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="price">Price:</label>
-                <input type="number" id="price" name="price" required>
+                <label for="priceUnit">Price Unit:</label>
+                <input type="number" id="priceUnit" name="priceUnit" required>
 
-                <label for="code">Code:</label>
-                <input type="text" id="code" name="code" required>
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" required>
 
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" name="quantity" required>
+                <label for="photo">Photo:</label>
+                <input type="text" id="photo" name="photo" required>
+
+                <label for="review">Review:</label>
+                <input type="text" id="review" name="review" required>
+
+                <label for="brand">Brand:</label>
+                <input type="text" id="brand" name="brand" required>
 
                 <label for="type">Product Type:</label>
-                <select id="type" name="type" itemid="type" required>
-                    <option value="">Select type</option>
-                    <option value="Electrónica">Electrónica</option>
-                    <option value="Ropa">Ropa</option>
-                    <option value="Alimentos">Alimentos</option>
-                </select>
 
-                <input type="submit" value="Submit" id="butonSubmit">
+
+                <button type="submit" id="butonSubmit" class="butonSubmit" >Submit</button>
+
             </form>
         </div>
 
