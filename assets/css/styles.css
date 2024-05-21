@@ -65,3 +65,8 @@ font-size: 20px;
 .butonSubmit:hover {
   background-color: rgb(240, 130, 130);
 }
+
+.tamanoImg{
+  width: 100px;
+  margin: 0 auto;
+}

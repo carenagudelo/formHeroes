@@ -55,6 +55,57 @@ let estudiantes = [estudianteUno, estudianteDos, estudianteTres, estudianteCuatr
 //etiquetaTituloUno.textContent = estudiantes[0].nombre;
 
 //Recorriendo un arreglo
+//estudiantes.forEach(function(estudiante){
+//    console.log(estudiante.nombre);
+//});
+
+/*************************************************************************************************/
+
+//GENERANDO CONTENIDO DINAMICO CON JS
+//1. Tener un arreglo de datos
+
+//2. Referencia a la base o componente padre
+let fila = document.getElementById("fila");
+
+//3. Recojo el arrela de datos y comienzo a generar etiquetas desde JS (traversing)
 estudiantes.forEach(function(estudiante){
-    console.log(estudiante.nombre);
-});
+
+    //¿Qué quieres crear?
+    //Solo puedo crear etiquedas reales de html
+
+    let columna = document.createElement("div");
+    columna.classList.add("col");
+
+    let tarjeta = document.createElement("div");
+    tarjeta.classList.add("card", "h100", "shadow");
+
+    let nombreEstudiante = document.createElement("h3");
+    nombreEstudiante.classList.add("text-center");
+    nombreEstudiante.textContent = estudiante.nombre
+
+    let edadEstudiante = document.createElement("h5");
+    edadEstudiante.classList.add("text-center");
+    edadEstudiante.textContent ="Edad: " + estudiante.edad
+
+    let deudaEstudiante = document.createElement("h5");
+    deudaEstudiante.classList.add("text-center");
+    deudaEstudiante.textContent = "Deuda: " + estudiante.saldoDeuda 
+
+    let cuotasPendientesEstudiante = document.createElement("h5");
+    cuotasPendientesEstudiante.classList.add("text-center");
+    cuotasPendientesEstudiante.textContent = "Cuotas pendientes: " + estudiante.cuotasPendientes
+
+    let fotoEstudiante = document.createElement("img");
+    fotoEstudiante.classList.add("tamanoImg");
+    fotoEstudiante.src=("../assets/images/logo-est.png")
+
+
+    //Asocio los elementos creados al componente padre
+    tarjeta.appendChild(nombreEstudiante);
+    tarjeta.appendChild(fotoEstudiante);
+    tarjeta.appendChild(edadEstudiante);
+    tarjeta.appendChild(deudaEstudiante);
+    tarjeta.appendChild(cuotasPendientesEstudiante);
+    columna.appendChild(tarjeta);
+    fila.appendChild(columna);
+})
